@@ -63,8 +63,8 @@ AUTHENTICATION_BACKENDS =(
 	'django_facebook.auth_backends.FacebookBackend',
 	'django.contrib.auth.backends.ModelBackend',
 )
-FACEBOOK_APP_ID = '463703423771173'
-FACEBOOK_API_SECRET = '3f06683f6b72d9c42a4bed94932a5122'
+FACEBOOK_APP_ID = '4637XXXXXXXXXXXXXXXX'
+FACEBOOK_API_SECRET = 'XXXXXXXXXXXXXXXXX'
 FACEBOOK_EXTENDED_PERMISSIONS = ['email']
 SOCIAL_AUTH_LOGIN_REDIRECT_URL = '/another-login-url/'
 #LOGIN_URL          = '/login-form/'
@@ -101,7 +101,7 @@ DATABASES = {
         'ENGINE': 'django.db.backends.mysql',
         #'NAME': 'django_db',
 	#'USER': 'daven',
-	#'PASSWORD':'daven',
+	#'PASSWORD':'',
 	'HOST': '',
 	'PORT': '',
 	'OPTIONS':{
