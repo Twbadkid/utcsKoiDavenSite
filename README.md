@@ -12,7 +12,7 @@ Web Application with Django
 <h3>pmem</h3><p>Django FrameWork</p>
 <p>../mytrip (app name)</p>
 <p>../../__init__.py</p>
-<p>../../urls.pyv
+<p>../../urls.py</p>
 <p>../../views.py</p>
 <p>../../model.py</p>
 <p>../../admin.py</p>
