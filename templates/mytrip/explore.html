@@ -1,0 +1,199 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<!--META-->
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="keywords" content="旅行,記錄,mytrip,trip,去旅行吧">
+<link rel="shortcut icon" href="/media/webicon/new5.ico">
+<title>Mytrip-探索</title>
+
+<!--STYLESHEETS-->
+    <link rel="stylesheet" href="http://cdn.bootcss.com/bootstrap/3.3.0/css/bootstrap.min.css">
+    <link rel="stylesheet" href="http://cdn.bootcss.com/bootstrap/3.3.0/css/bootstrap-theme.min.css">
+    <link rel="stylesheet" type="text/css" href="/static/mytrip/css/new.css"/>
+<link href="/static/mytrip/css/component.css" rel="stylesheet" type="text/css" />
+<link rel="stylesheet" type="text/css" href="/static/mytrip/css/component1.css"/>
+<!-- 掛載JS樣式 -->
+    <!--script src="https://code.jquery.com/jquery.js"></script-->
+    <!--script src="http://cdn.bootcss.com/bootstrap/3.3.0/js/bootstrap.min.js"></script-->
+<script src="/static/mytrip/js/modernizr.custom.js"></script>
+</head>
+<body>
+  <div class="container-fluid">
+    <div class="row">
+        <div class="col-xs-2 col-md-2">
+          <div class="menuside">
+            <div class="logo"><a href="/mytrip/"><img src="/media/webicon/new5.png" class="img-rounded" id="imm" /></a>
+              <h3>Shared</h3>
+    </div>
+    <div class="menubar">
+<ul>
+<li><a href="/mytrip/intro/"><span class="glyphicon glyphicon-info-sign"></span>簡介 Intro.</a></li>
+<li><a href="/mytrip/explore/"><span class="glyphicon glyphicon-th"></span>探索 Explore</a></li>
+<!-- <li><a href=""><span class="glyphicon glyphicon-search"></span>搜尋 Search</a></li> -->
+</ul>
+<ul>
+{% if username %}
+<li><a href="/mytrip/home/">屬於{{ username }}的</a></li>
+<li><a href="/mytrip/logout/">登出 Log out</a></li>
+{% else %}
+<li><a href="/mytrip/login/">登入 Log in</a></li>
+<li><a href="/mytrip/register/">註冊 Sign up</a></li>
+{% endif %}
+</ul>
+      <ul id="app">
+	<li><a href="#"><img src="/media/webicon/google_play.png" width="150px" height="60px"></a></li>
+	<li><a href="#"><img src="/media/webicon/ios1.png" width="150px" height="75px"></a></li>
+      </ul>
+    </div>
+    <div class="moreab">
+      <p>
+      ©2014 <a href="#">Daven/Koi</a> Project</p>
+      <p>With Google Plays API</p><p>/Boostrap/Glyphicons</p>
+    </div>
+  </div>
+</div>
+<div class="col-xs-10 col-md-10">
+	<section class="grid-wrap">
+        <ul class="gr swipe-down" id="grid">
+                <li class="title-box">
+                        <h2>Explore<a href="#">旅行探索</a></h2>
+                </li>
+                                        <li><a href="#"><img src="/media/253_30_43.jpg" alt="dummy"  width="400"><h3>A fantastic title</h3></a></li>
+                                        <li><a href="#"><img src="/media/25_12_37.jpg" alt="dummy"  width="400"><h3>A fantastic title</h3></a></li>
+                                        <li><a href="#"><img src="/media/24_12_36.jpg" alt="dummy"  width="400"><h3>A fantastic title</h3></a></li>
+                                        <li><a href="#"><img src="/media/24_12_36.jpg" alt="dummy"  width="400"><h3>A fantastic title</h3></a></li>
+                                        <li><a href="#"><img src="/media/24_12_36.jpg" alt="dummy"  width="400"><h3>A fantastic title</h3></a></li>
+                                        <li><a href="#"><img src="/media/24_12_36.jpg" alt="dummy"  width="400"><h3>A fantastic title</h3></a></li>
+                                        <li><a href="#"><img src="/media/24_12_36.jpg" alt="dummy"  width="400"><h3>A fantastic title</h3></a></li>
+                                        <li><a href="#"><img src="/media/24_12_36.jpg" alt="dummy"  width="400"><h3>A fantastic title</h3></a></li>
+                                        <li><a href="#"><img src="/media/24_12_36.jpg" alt="dummy"  width="400"><h3>A fantastic title</h3></a><div class="mask">
+                    <h2>我的蛋塔-澳門</h2>
+                    <p>輕踏在小石子路的蛋塔旅行</p>
+                  </div> </li>
+        </ul>
+</section>
+      </div><!--end col-->
+    </div><!--row-->
+  </div><!--end container fluid-->
+        <script src="/static/mytrip/js/masonry.pkgd.min.js"></script>
+        <script src="/static/mytrip/js/imagesloaded.pkgd.min.js"></script>
+        <script src="/static/mytrip/js/classie.js"></script>
+        <script src="/static/mytrip/js/colorfinder-1.1.js"></script>
+        <script src="/static/mytrip/js/gridScrollFx.js"></script>
+        <script>
+                new GridScrollFx( document.getElementById( 'grid' ), {
+                        viewportFactor : 0.4
+                } );
+        </script>
+      </div><!--end col-->
+    </div><!--row-->
+  </div>
+   <div id="morphsearch" class="morphsearch">
+        <form class="morphsearch-form">
+          <input class="morphsearch-input" type="search" placeholder="搜尋Search..."/>
+          <button class="morphsearch-submit" type="submit">Search</button>
+        </form>
+        <div class="morphsearch-content">
+          <div class="dummy-column">
+            <h2>季節Season</h2>
+            <a class="dummy-media-object" href="#">
+              <img class="round" src="#" alt="Spring"/>
+              <h3>春</h3>
+            </a>
+            <a class="dummy-media-object" href="#">
+              <img class="round" src="#" alt="Summer"/>
+              <h3>夏</h3>
+            </a>
+            <a class="dummy-media-object" href="#">
+              <img class="round" src="#" alt="Autumn"/>
+              <h3>秋</h3>
+            </a>
+            <a class="dummy-media-object" href="#">
+              <img class="round" src="#" alt="Winter"/>
+              <h3>冬</h3>
+            </a>
+          </div>
+        </div><!-- /morphsearch-content -->
+        <span class="morphsearch-close"></span>
+      </div><!-- /morphsearch -->
+      <script src="/static/mytrip/js/classie.js"></script>
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
+		<script src="/static/mytrip/js/grid.js"></script>
+		<script>
+			$(function() {
+				Grid.init();
+			});
+		</script>
+    <script>
+      (function() {
+        var morphSearch = document.getElementById( 'morphsearch' ),
+          input = morphSearch.querySelector( 'input.morphsearch-input' ),
+          ctrlClose = morphSearch.querySelector( 'span.morphsearch-close' ),
+          isOpen = isAnimating = false,
+          // show/hide search area
+          toggleSearch = function(evt) {
+            // return if open and the input gets focused
+            if( evt.type.toLowerCase() === 'focus' && isOpen ) return false;
+
+            var offsets = morphsearch.getBoundingClientRect();
+            if( isOpen ) {
+              classie.remove( morphSearch, 'open' );
+
+              // trick to hide input text once the search overlay closes
+              // todo: hardcoded times, should be done after transition ends
+              if( input.value !== '' ) {
+                setTimeout(function() {
+                  classie.add( morphSearch, 'hideInput' );
+                  setTimeout(function() {
+                    classie.remove( morphSearch, 'hideInput' );
+                    input.value = '';
+                  }, 300 );
+                }, 500);
+              }
+
+              input.blur();
+            }
+            else {
+              classie.add( morphSearch, 'open' );
+            }
+            isOpen = !isOpen;
+          };
+
+        // events
+        input.addEventListener( 'focus', toggleSearch );
+        ctrlClose.addEventListener( 'click', toggleSearch );
+        // esc key closes search overlay
+        // keyboard navigation events
+        document.addEventListener( 'keydown', function( ev ) {
+          var keyCode = ev.keyCode || ev.which;
+          if( keyCode === 27 && isOpen ) {
+            toggleSearch(ev);
+          }
+        } );
+
+
+        /***** for demo purposes only: don't allow to submit the form *****/
+        // morphSearch.querySelector( 'button[type="submit"]' ).addEventListener( 'click', function(ev) { ev.preventDefault(); } );
+      })();
+    </script>
+    <!--script>
+  window.fbAsyncInit = function() {
+    FB.init({
+      appId      : '463703423771173',
+      xfbml      : true,
+      version    : 'v2.1'
+    });
+  };
+
+  (function(d, s, id){
+     var js, fjs = d.getElementsByTagName(s)[0];
+     if (d.getElementById(id)) {return;}
+     js = d.createElement(s); js.id = id;
+     js.src = "//connect.facebook.net/en_US/sdk.js";
+     fjs.parentNode.insertBefore(js, fjs);
+   }(document, 'script', 'facebook-jssdk'));
+</script-->
+</body>
+</html>

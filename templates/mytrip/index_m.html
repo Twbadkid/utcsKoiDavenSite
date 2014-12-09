@@ -1,0 +1,298 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="keywords" content="旅行,記錄,mytrip,trip,去旅行吧">
+<link rel="shortcut icon" href="/media/webicon/new5.ico">
+    <title>Mytrip-去旅行吧</title>
+    <!-- 掛載CSS樣式 -->
+    <link rel="stylesheet" href="http://cdn.bootcss.com/bootstrap/3.3.0/css/bootstrap.min.css">
+    <link rel="stylesheet" href="http://cdn.bootcss.com/bootstrap/3.3.0/css/bootstrap-theme.min.css">
+    <link rel="stylesheet" type="text/css" href="/static/mytrip/css/new.css">
+    <link rel="stylesheet" type="text/css" href="/static/mytrip/css/component.css">
+    <!-- 掛載JS樣式 -->
+    <script src="https://code.jquery.com/jquery.js"></script>
+    <script src="http://cdn.bootcss.com/bootstrap/3.3.0/js/bootstrap.min.js"></script>
+</head>
+<body>
+  <div class="container-fluid">
+    <div class="row">
+      <div class="col-xs-8 col-md-10">
+        <div class="inpage">
+            <!--div class="vedioplay">
+              <video controls=false poster="ho1.jpg" autoplay="true" preload="auto" id="video1">
+                <source src="travelling.mp4" type="video/mp4" />
+                <source src="travelling.webm" type="video/webm"/>
+              </vedio>
+              <script type="text/javascript">
+                myVid=document.getElementById("video1");
+                myVid.defaultMuted=true;
+              </script>
+            </div--><!--end vedio play-->
+            <div class="intro">
+              <h1>去旅行吧!</h1>
+              <h3>記錄每個旅行的時刻 Collect&amp;Share</h3>
+		<h4>android App Download&rarr;<a href="https://db.tt/re9AIfIq">Demo版</a></h4>
+              <p>左側探索或搜索可觀看與體驗分享的旅行。</p>
+              <p>想看自己的旅行記得先登入喔!</p>
+		<div
+  			class="fb-like"
+  			data-share="true"
+  			data-width="450"
+ 			data-show-faces="true">
+		</div>
+
+            </div><!--end intro-->
+            <div class="downContain">
+              <a href="#maind" id="btnId"><img src="/media/webicon/chevron-down.png" /></a>
+              <script type="text/javascript">
+
+                $("#btnId").click(function(event) {
+                  $("body").animate({
+                      scrollTop: document.all.explore.offsetTop-8
+                    },
+                    700, function() {
+                      // console.log(document.all.explore.offsetTop);
+                    });
+                }); 
+
+            </script>
+            </div><!--end downcontain-->
+          </div><!--inpage-->
+          <div class="explore" id="explore">
+            <!-- <div class="row"> -->
+            <div class="photo1">
+              <div class="view view-first">
+                <div class="xs">
+                  <img src="/media/25_12_37.jpg" height="300" width="325">
+                  <div class="mask">
+                    <h2>久違的海</h2>
+                    <p>在偶然，我到了海邊，看見傍晚、看見夕陽</p>
+                    <a href="/mytrip/seetripnl/" class="info">更多細節</a>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="photo2">
+              <div class="view view-first">
+                <div class="xs">
+                  <img src="/media/24_12_36.jpg" height="300" width="400">
+                  <div class="mask">
+                    <h2>玉山之行</h2>
+                    <p>透過照片欣賞不同地方的風貌特色，感動的景色</p>
+                    <a href="/media/24_12_36.jpg" class="info">感動瞬間</a>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="photo3">
+              <div class="view view-first">
+                <div class="xs">
+                  <img src="/media/242_29_90.jpg" height="555" width="380">
+                  <div class="mask">
+                    <h2>我的蛋塔-澳門</h2>
+                    <p>輕踏在小石子路的蛋塔旅行</p>
+                    <a href="/mytrip/trip/29/" class="info">澳門葡韻</a>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="photo4">
+              <div class="view view-first">
+                <div class="xs">
+                  <img src="/media/251_30_99.jpg" height="400" width="480">
+                  <div class="mask">
+                    <h2>畢業旅行</h2>
+                    <p>京都、大阪、奈良五日遊</p>
+                    <a href="/mytrip/trip/12/" class="info">Graduation trip</a>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="photo5">
+              <div class="view view-first">
+                <div class="xs">
+                  <img src="/media/253_30_43.jpg" height="250" width="250">
+                  <div class="mask">
+	    	   <h2>大阪夜景</h2>
+	    	   <p>梅田</p>
+                    <a href="/media/242_29_90.jpg" class="info">俯瞰大阪</a>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="etitle"><h2>每日精選</h2><p>-all about beautiful blue</p><p>右方探索可以看更多的trip</p></div>
+            <div class="photo6">
+              <div class="view view-first">
+                <div class="xs">
+                  <img src="/media/239_29_87.jpg" height="148" width="300">
+                  <div class="mask">
+                    <h2>回家路上</h2>
+                    <p>天空依然蔚然，家在哪呢?</p>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div><!--explore-->
+      </div><!--end col-->
+        <div class="col-xs-4 col-md-2">
+          <div class="menuside">
+            <div class="logo"><a href="/mytrip/"><img src="/media/webicon/new5.png" class="img-rounded" id="imm" /></a>
+              <h3>Shared</h3>
+            </div>
+            <div class="menubar">
+              <ul>
+                <li><a href="/mytrip/intro/"><span class="glyphicon glyphicon-info-sign"></span>簡介 Intro.</a></li>
+                <li><a href="/mytrip/explore/"><span class="glyphicon glyphicon-th"></span>探索 Explore</a></li>
+                <!-- <li><a href=""><span class="glyphicon glyphicon-search"></span>搜尋 Search</a></li> -->
+              </ul>
+              <ul>
+                {% if username %}
+                <li><a href="/mytrip/home/">屬於{{ username }}的</a></li>
+                <li><a href="/mytrip/logout/">登出 Log out</a></li>
+                {% else %}
+                <li><a href="/mytrip/login/">登入 Log in</a></li>
+                <li><a href="/mytrip/register/">註冊 Sign up</a></li>
+                {% endif %}
+              </ul>
+              <ul id="app">
+                <li><a href="https://db.tt/uwn1sATj"><img src="/media/webicon/google_play.png" width="150px" height="60px"></a></li>
+                <li><a href="#"><img src="/media/webicon/ios1.png" width="150px" height="75px"></a></li>
+              </ul>
+            </div>
+            <div class="moreab">
+              <p>
+              ©2014 <a href="#">Daven/Koi</a> Project</p>
+              <p>With Google Plays API</p><p>/Boostrap/Glyphicons</p>
+            </div>
+          </div>
+        </div>
+    </div><!--row-->
+  </div>
+   <div id="morphsearch" class="morphsearch">
+        <form class="morphsearch-form">
+          <input class="morphsearch-input" type="search" placeholder="搜尋Search..."/>
+          <button class="morphsearch-submit" type="submit">Search</button>
+        </form>
+        <div class="morphsearch-content">
+          <div class="dummy-column">
+            <h2>季節Season</h2>
+            <a class="dummy-media-object" href="#">
+              <img class="round" src="#" alt="Spring"/>
+              <h3>春</h3>
+            </a>
+            <a class="dummy-media-object" href="#">
+              <img class="round" src="#" alt="Summer"/>
+              <h3>夏</h3>
+            </a>
+            <a class="dummy-media-object" href="#">
+              <img class="round" src="#" alt="Autumn"/>
+              <h3>秋</h3>
+            </a>
+            <a class="dummy-media-object" href="#">
+              <img class="round" src="#" alt="Winter"/>
+              <h3>冬</h3>
+            </a>
+          </div>
+          <div class="dummy-column">
+            <h2>旅記Trips</h2>
+            <a class="dummy-media-object" href="#">
+              <img src="#" alt="food"/>
+              <h3>美食之旅</h3>
+            </a>
+            <a class="dummy-media-object" href="#">
+              <img src="#" alt="art"/>
+              <h3>Romantic France</h3>
+            </a>
+          </div>
+          <div class="dummy-column">
+            <h2>標籤Tags</h2>
+            <a class="dummy-media-object" href="#">
+              <img src="#" alt="taste"/>
+              <h3>delicious</h3>
+            </a>
+            <a class="dummy-media-object" href="#">
+              <img src="#" alt="taipei"/>
+              <h3>Taipei</h3>
+            </a>
+            <a class="dummy-media-object" href="#">
+              <img src="#" alt="weekend"/>
+              <h3>周末</h3>
+            </a>
+          </div>
+        </div><!-- /morphsearch-content -->
+        <span class="morphsearch-close"></span>
+      </div><!-- /morphsearch -->
+      <script src="/static/mytrip/js/classie.js"></script>
+    <script>
+      (function() {
+        var morphSearch = document.getElementById( 'morphsearch' ),
+          input = morphSearch.querySelector( 'input.morphsearch-input' ),
+          ctrlClose = morphSearch.querySelector( 'span.morphsearch-close' ),
+          isOpen = isAnimating = false,
+          // show/hide search area
+          toggleSearch = function(evt) {
+            // return if open and the input gets focused
+            if( evt.type.toLowerCase() === 'focus' && isOpen ) return false;
+
+            var offsets = morphsearch.getBoundingClientRect();
+            if( isOpen ) {
+              classie.remove( morphSearch, 'open' );
+
+              // trick to hide input text once the search overlay closes 
+              // todo: hardcoded times, should be done after transition ends
+              if( input.value !== '' ) {
+                setTimeout(function() {
+                  classie.add( morphSearch, 'hideInput' );
+                  setTimeout(function() {
+                    classie.remove( morphSearch, 'hideInput' );
+                    input.value = '';
+                  }, 300 );
+                }, 500);
+              }
+              
+              input.blur();
+            }
+            else {
+              classie.add( morphSearch, 'open' );
+            }
+            isOpen = !isOpen;
+          };
+
+        // events
+        input.addEventListener( 'focus', toggleSearch );
+        ctrlClose.addEventListener( 'click', toggleSearch );
+        // esc key closes search overlay
+        // keyboard navigation events
+        document.addEventListener( 'keydown', function( ev ) {
+          var keyCode = ev.keyCode || ev.which;
+          if( keyCode === 27 && isOpen ) {
+            toggleSearch(ev);
+          }
+        } );
+
+
+        /***** for demo purposes only: don't allow to submit the form *****/
+        // morphSearch.querySelector( 'button[type="submit"]' ).addEventListener( 'click', function(ev) { ev.preventDefault(); } );
+      })();
+    </script>
+    <script>
+  window.fbAsyncInit = function() {
+    FB.init({
+      appId      : '463703423771173',
+      xfbml      : true,
+      version    : 'v2.1'
+    });
+  };
+
+  (function(d, s, id){
+     var js, fjs = d.getElementsByTagName(s)[0];
+     if (d.getElementById(id)) {return;}
+     js = d.createElement(s); js.id = id;
+     js.src = "//connect.facebook.net/en_US/sdk.js";
+     fjs.parentNode.insertBefore(js, fjs);
+   }(document, 'script', 'facebook-jssdk'));
+</script>
+</body>
+</html>

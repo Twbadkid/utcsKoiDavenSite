@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<!--META-->
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="keywords" content="旅行,記錄,mytrip,trip,去旅行吧">
+<link rel="shortcut icon" href="/media/webicon/new5.ico">
+<title>Mytrip-登入</title>
+
+<!--STYLESHEETS-->
+<link href="/static/mytrip/css/register.css" rel="stylesheet" type="text/css" />
+    <link rel="stylesheet" href="http://cdn.bootcss.com/bootstrap/3.3.0/css/bootstrap.min.css">
+    <link rel="stylesheet" href="http://cdn.bootcss.com/bootstrap/3.3.0/css/bootstrap-theme.min.css">
+    <link rel="stylesheet" type="text/css" href="/static/mytrip/css/new.css">
+<!-- 掛載JS樣式 -->
+    <script src="https://code.jquery.com/jquery.js"></script>
+    <script src="http://cdn.bootcss.com/bootstrap/3.3.0/js/bootstrap.min.js"></script>
+</head>
+<body>
+  <div class="container-fluid">
+    <div class="row">
+        <div class="col-xs-3 col-md-2">
+          <div class="menuside">
+            <div class="logo"><a href="/mytrip/"><img src="/media/webicon/new5.png" class="img-rounded" id="imm" /></a>
+              <h3>Shared</h3>
+            </div>
+            <div class="menubar">
+              <ul>
+                <li><a href="/mytrip/intro/"><span class="glyphicon glyphicon-info-sign"></span>簡介 Intro.</a></li>
+                <li><a href="/mytrip/explore/"><span class="glyphicon glyphicon-th"></span>探索 Explore</a></li>
+                <!-- <li><a href=""><span class="glyphicon glyphicon-search"></span>搜尋 Search</a></li> -->
+              </ul>
+              <ul>
+                <li><a href="/mytrip/login/">登入 Log in</a></li>
+                <li><a href="/mytrip/register/">註冊 Sign up</a></li>
+		<!--li><a href="{% url 'socialauth_begin' 'facebook' %}">fblogin</a></li-->
+              </ul>
+              <ul id="app">
+                <li><a href="#"><img src="/media/webicon/google_play.png" width="150px" height="60px"></a></li>
+                <li><a href="#"><img src="/media/webicon/ios1.png" width="150px" height="75px"></a></li>
+              </ul>
+            </div> 
+            <div class="moreab">
+              <p>
+              ©2014 <a href="#">Daven/Koi</a> Project</p>
+              <p>With Google Plays API</p><p>/Boostrap/Glyphicons</p> 
+            </div> 
+          </div>
+        </div>
+	<div class="col-xs-8 col-md-10">
+<!--LOGIN FORM-->
+<div class="formsq">
+<form name="login-form" class="login-form" action="" method="post" encype="multipart/form-data" >{% csrf_token %}
+
+	<!--HEADER-->
+    <div class="header">
+    <!--TITLE--><h1>登入</h1><!--END TITLE-->
+    <!--DESCRIPTION-->
+<span>在下方填寫</span><!--END DESCRIPTION-->
+{% ifequal err -1 %}
+<br><span>帳號或密碼有打錯喔lol </span>
+{% endifequal %}
+    </div>
+    <!--END HEADER-->
+	
+	<!--CONTENT-->
+    <div class="content">
+	{{uf.user_id}}
+	<h5>帳號</h5>
+	{{uf.password}}	
+	<h5>密碼</h5>	
+	<!--USERNAMEinput name="username" {{uf.username}} class="input username" value="Username" onfocus="this.value=''"--><!--END USERNAME-->
+    <!--PASSWORD--><!--input name="password" class="input password"  {{uf.password}} value="Password" /-->
+<!--END PASSWORD-->
+    </div>
+    <!--END CONTENT-->
+    
+    <!--FOOTER-->
+    <div class="footer">
+    <!--LOGIN BUTTON--><a href="#" onclick=rel()><input class="button" type="submit" value="登入"></a>
+    <!--REGISTER BUTTON--><a href="/mytrip/register/" class="register"><!--input type="submit" name="submit" value="Register" class="register" /--><span>註冊</span></a><!--END REGISTER BUTTON-->
+	<a href="{% url "socialauth_begin" "facebook" %}">fblogin</a>
+    </div>
+    <!--END FOOTER-->
+</form>
+<!--END LOGIN FORM-->
+	      <div class="inform">
+                <p>登入後右側會出現名字，點一下可以看自己的旅行喔!</p>
+              </div>
+          </div>
+        </div>
+      </div>
+    </div>
+</body>
+</html>
+

@@ -1,0 +1,340 @@
+@import url(http://fonts.googleapis.com/css?family=Coming+Soon);
+@font-face {
+    font-family: NotoSansHant-Regular;
+    src: url(./fonts/NotoSansHant-Regular.otf);
+}
+a{ text-decoration: none; color: #000000;}
+a:hover{color: #55aa00;/*#a6ffa6;*/}
+html, body{
+	height: 100%;
+	background-color:#cccccc; 
+min-width: 950px;
+font-family: 'Coming Soon', cursive, NotoSansHant-Regular;
+background-image: url("/media/webicon/floor.jpg");
+}
+body::-webkit-scrollbar-thumb {
+      background-color: white;
+}
+ul{list-style: none;}
+
+.container-fluid{
+	min-height:920px; }
+.col-md-2{
+	min-width: 150px;
+	max-width: 230px;
+	/*min-height: 700px;*/
+	height: 100%;
+	position: fixed;
+	right: 2px;
+	/*padding-left: 10px;*/
+	background-repeat: repeat;
+	/*z-index:5;*/
+}
+@keyframes fadein {
+    from { opacity: 0; }
+    to   { opacity: 1; }
+}
+
+/* Firefox < 16 */
+@-moz-keyframes fadein {
+    from { opacity: 0; }
+    to   { opacity: 1; }
+}
+
+/* Safari, Chrome and Opera > 12.1 */
+@-webkit-keyframes fadein {
+    from { opacity: 0; }
+    to   { opacity: 1; }
+}
+
+/* Internet Explorer */
+@-ms-keyframes fadein {
+    from { opacity: 0; }
+    to   { opacity: 1; }
+}
+.col-md-10{
+	min-width: 600px;
+	height: 100%;
+	padding-left:5px;
+	/*margin-left:18%;*/
+	/*width: 100%;*/
+	/*max-width: 1250px;*/
+	-webkit-animation: fadein 3s; /* Safari, Chrome and Opera > 12.1 */
+       -moz-animation: fadein 3s; /* Firefox < 16 */
+        -ms-animation: fadein 3s; /* Internet Explorer */
+         -o-animation: fadein 3s; /* Opera < 12.1 */
+            animation: fadein 3s;
+}
+.menuside{
+	min-width: 200px;
+	max-width: 240px;
+	min-height: 500px;
+	height: 100%;
+	text-align: left;
+	padding-top: 15px;
+	/*border-radius: 5px;*/
+}
+.menuside a{text-decoration: none;}
+.logo{text-align: center;}
+.logo h3{color: #000000;font-weight: bold;}
+/*.logo a img{display:none;border:0; }*/
+.logo a{
+	margin: 0px auto;
+	/*background:url('icon/mytriplala.gif')no-repeat;*/
+	width: 120px;
+	height: 120px;}
+.logo h3:hover{color: #55aa00;}
+.menubar{
+	/*font-weight: bold;*/
+	padding-left: 25px;
+	font-size: 22px;
+}
+.menubar ul{
+	padding-left: 10px;
+	margin-top: 25px;
+	margin-bottom: 25px;
+}
+.menubar li{
+	margin-top: 5px;
+}
+#app{padding-left: 0px;}
+.menubar a{font-family: 'Coming Soon', cursive, NotoSansHant-Regular; 
+font-weight: bolder;
+font-size:25px;
+}
+.logo h3{font-size: 40px;}
+#imm{
+	width: 120px;
+	height: 120px;
+}
+.moreab{
+	min-width: 185px;			
+	padding-bottom: 1px;
+	padding-left: 28px;
+	margin-bottom: 0px;
+	bottom: 0px;
+	position: fixed;
+	/*background-color: rgba(255, 255, 255, 0.9);*/
+}
+.moreab p{margin-bottom: 1px; color:  #55aa00;}
+.moreab p a{ color:  #55aa00;}
+/*for index*/
+.inpage{
+	background:url("http://www.barefootbeachblonde.com/wp-content/uploads/2012/09/road-trip_rainbow-1024x685.jpg") no-repeat;
+	margin-top: 4%;
+	background-color: rgba(255, 255, 255, 0.8);
+	height: 100%;
+	min-height: 690px;
+	width: 100%;
+	border-radius: 5px;
+}
+.vedioplay{
+	width: 480px;
+	height: 450px;
+	background-color: rgba(255, 255, 255, 0.8);
+	position: absolute;
+	margin-left: 450px;
+	margin-top: 0px;
+	z-index: 0;
+}
+.vedioplay video{
+	width: 480px;
+	height: 450px;
+}
+.intro{
+	font-family: 'Coming Soon', cursive, NotoSansHant-Regular;
+	color: #000000;
+	margin-top: 150px;
+	margin-left: 40px;
+	position: absolute;
+	z-index: 1;
+}
+.intro h1{
+	font-size: 50px;
+	font-weight: bold;
+	margin-left: 10px;
+} 
+.intro h3{font-family: 'Coming Soon', cursive, NotoSansHant-Regular;
+padding-bottom: 30px;}
+.intro p{
+	font-size: 18px;
+	margin-left: 30px;
+}
+.downContain { position: absolute; margin-top: 600px; margin-left: 45%; z-index: 1; }
+.downContain img{vertical-align: middle;width: 110px; height: 50px; }
+/*search*/
+.hashtag{
+	margin-top:50px; 
+	height: 180px;
+	background-color:#ffffff;
+	/*border: 2px #a6ffa6 bold;*/
+	border-radius: 5px;
+}
+.hashtag a{padding: 25px 10px 5px 10px; }
+.hashtag span{display: inline-block;}
+.explore{
+	margin-top:5%; 
+	background-color: rgba(255, 255, 255, 0.8);
+	padding-top: 10px;
+	height: 740px;
+	/*border-bottom: 2px #a6ffa6 solid;*/
+	border-radius: 5px;
+}
+.explore h2{padding-top:5px; padding-left: 5px; margin-bottom: 0px; }
+.photo1{/*width: 327px;height: 300px;*/margin: 5px 5px 5px 10px;float: left;background-color: #000000;position: absolute;}
+.photo2{/*width: 402px;height: 300px;*/ margin: 5px 5px 5px 349px;float: left;background-color: #000000;position: absolute;}
+.photo3{/*width: 380px;height: 555px;*/ margin: 5px 5px 5px 760px; float: left;background-color: #000000;position: absolute;}
+.photo4{/*width: 480px;height: 400px;*/ margin: 312px 10px 5px 10px;background-color: #000000;position:absolute;}
+.photo5{/*width: 250px;height: 250px;*/ margin: 312px 400px 2px 500px;background-color: #000000;position:absolute;}
+.photo6{/*width: 300px;height: 148px;*/ margin: 568px 2px 2px 840px;position:absolute;}
+.etitle{width: 330px;height: 148px; margin: 568px 2px 2px 500px; border: 2px #ffb442 solid; position: absolute;}
+.xs{
+    /*height: 220px;**/
+    width:100%;
+    height: 100%;
+    overflow: hidden;
+    position: relative;
+    text-align: center;
+    box-shadow: 1px 1px 2px #e6e6e6 solid;
+    cursor: default;}
+.xs .mask, .xs .content {
+    width: 100%;
+    height: 100%;
+    /*height: 220px;*/
+    position: absolute;
+    overflow: hidden;
+    top: 0;
+    left: 0;
+    bottom: 0;
+}
+.xs img {
+    display: block;
+    position: relative
+}
+.xs h2 {
+    text-transform: uppercase;
+    color: #fff;
+    text-align: center;
+    position: relative;
+    font-size: 20px;
+    padding: 10px;
+    font-weight: bold;
+    /*background: rgba(0, 0, 0, 0.8);*/
+    margin: 20px 0 0 0;
+	font-family: 'Coming Soon', cursive, NotoSansHant-Regular;
+}
+.xs p {
+    font-family: 'Coming Soon', cursive, NotoSansHant-Regular;
+    font-style: italic;
+    font-size: 18px;
+    position: relative;
+    color: #fff;
+    padding: 10px 20px 20px;
+    text-align: center
+}
+.xs a.info {
+    display: inline-block;
+    text-decoration: none;
+    padding: 7px 14px;
+    background: #000;
+    color: #fff;
+    text-transform: uppercase;
+    box-shadow: 0 0 1px #000;
+    font-size: 16px;
+}
+.xs a.info:hover {
+    box-shadow: 0 0 5px #000
+}
+
+.view-first img { 
+    transition: all 0.2s linear;
+}
+.view-first .mask{
+    opacity: 0; 
+    background-color:rgba(255,221,85, 0.4);
+    transition: all 0.4s ease-in-out;
+}
+.view-first h2 {
+    transform: translateY(-100px);
+    opacity: 0;
+    transition: all 0.2s ease-in-out;
+}
+.view-first p { 
+    transform: translateY(100px);
+    opacity: 0;
+    transition: all 0.2s linear;
+}
+.view-first a.info{
+    opacity: 0;
+    transition: all 0.2s ease-in-out;
+}
+
+.view-first:hover img { 
+    transform: scale(1.1);
+} 
+.view-first:hover .mask { 
+    opacity: 1;
+}
+.view-first:hover h2,
+.view-first:hover p,
+.view-first:hover a.info {
+    opacity: 1;
+    transform: translateY(0px);
+}
+.view-first:hover p {
+    transition-delay: 0.1s;
+}
+.view-first:hover a.info {
+    transition-delay: 0.2s;
+}
+/*formsquare for sign up, login,profile*/
+.formsq{
+	margin: 20px auto;
+	background-color:rgba(255, 255, 255, 0.8); /*#a6ffa6;*/
+	padding-top: 20px;
+	height: 750px;
+	width: 750px;
+	border-radius: 5px;
+}
+.collect{
+	background-color: rgba(255, 255, 255, 0.8);
+	padding-left: 15px;
+	padding-right: 15px;
+	border-radius: 5px;
+}
+.pagination{margin: 25px auto;}
+#fixed-ad{
+  background:#FFffff;
+  color:#000000;
+  border:4px solid #ffd242;
+  padding:10px;
+  width:80px;
+  height:120px;
+  position:fixed;
+  top:60px;
+  right:10px;
+  _position: absolute; /* position fixed for IE6 */
+  _top:expression(documentElement.scrollTop+100);
+  z-index:3;
+}
+.fixedbtn{margin-top: 4%;height: 60px;}
+.fixedbtn #ch{ width: 250px;height: 40px; float: left;margin-top: 25px;}
+.fixedbtn button{display: inline;}
+.main{background-color: #ffffff;height: 500px;}
+.itrips{margin-top: 25px;}
+.inform{
+	margin-left: 15%; 
+}
+.about{
+	margin: 50px auto;
+	background-color: rgba(255, 255, 255, 0.8);
+	text-align: left;
+	padding-left: 5%;
+	padding-top: 15px;
+	padding-bottom: 15px;
+	border-radius: 5px;
+}
+.about p{
+	font-size: 22px;
+}
+

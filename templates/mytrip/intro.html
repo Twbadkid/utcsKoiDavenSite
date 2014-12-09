@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="keywords" content="旅行,記錄,mytrip,trip,去旅行吧">
+<link rel="shortcut icon" href="/media/webicon/new5.ico">
+    <title>Mytrip-去旅行吧</title>
+    <!-- 掛載CSS樣式 -->
+    <link rel="stylesheet" href="http://cdn.bootcss.com/bootstrap/3.3.0/css/bootstrap.min.css">
+    <link rel="stylesheet" href="http://cdn.bootcss.com/bootstrap/3.3.0/css/bootstrap-theme.min.css">
+    <link rel="stylesheet" type="text/css" href="/static/mytrip/css/new.css">
+    <link rel="stylesheet" type="text/css" href="/static/mytrip/css/component.css">
+    <!-- 掛載JS樣式 -->
+    <script src="https://code.jquery.com/jquery.js"></script>
+    <script src="http://cdn.bootcss.com/bootstrap/3.3.0/js/bootstrap.min.js"></script>
+</head>
+<body>
+  <div class="container-fluid">
+    <div class="row">
+        <div class="col-xs-3 col-md-2">
+          <div class="menuside">
+            <div class="logo"><a href="/mytrip/"><img src="/media/webicon/new5.png" class="img-rounded" id="imm" /></a>
+              <h3>Shared</h3>
+            </div>
+            <div class="menubar">
+              <ul>
+                <li><a href="/mytriip/"><span class="glyphicon glyphicon-info-sign"></span>簡介 Intro.</a></li>
+                <li><a href=""><span class="glyphicon glyphicon-th"></span>探索 Explore</a></li>
+                <!-- <li><a href=""><span class="glyphicon glyphicon-search"></span>搜尋 Search</a></li> -->
+              </ul>
+              <ul>
+                {% if username %}
+                <li><a href="/mytrip/home/">屬於{{ username }}</a></li>
+                <li><a href="/mytrip/logout/">登出 Log out</a></li>
+                {% else %}
+ 	       <li><a href="/mytrip/login/">登入 Log in</a></li>
+               <li><a href="/mytrip/register/">註冊 Sign up</a></li>
+                {% endif %}
+	      </ul>
+              <ul id="app">
+                <li><a href="#"><img src="/media/webicon/google_play.png" width="150px" height="60px"></a></li>
+                <li><a href="#"><img src="/media/webicon/ios1.png" width="150px" height="75px"></a></li>
+              </ul>
+            </div>
+            <div class="moreab">
+              <p>
+              ©2014 <a href="#">Daven/Koi</a> Project</p>
+              <p>With Google Plays API</p><p>/Boostrap/Glyphicons</p>
+            </div>
+          </div>
+        </div>
+      <div class="col-xs-9 col-md-10" id="maind">
+	<div class="about">
+              <h2>"myTrips-去旅行吧!"</h2><p> 是個小小的社群網站，以"trip"分享!</p><p>最簡單的方式，隨時記錄你到哪裡、什麼時候去的、你當下的感受或心情。</p>
+              <p>也能讓旅行中的夥伴收藏這份記錄，為自己，珍藏屬於自己的回憶；</p>
+              <p>此外，讓大家知道旅行的好，旅行中的快樂，發現志同道合的"tripper"。</p>
+              <p> </p>
+              <p> </p>
+              <p><h3>在網站</h3>
+                guest可以:
+                <ul><li>逛逛這個網站</li>
+                  <li>欣賞別人旅行中的點點滴滴</li>
+                  <li>註冊成為"tripper"</li>
+                </ul>
+              "tripper"可以:
+                <ul>
+                  <li>為你的記錄挑一個你喜歡的樣子</li>
+                  <li>與你的朋友分享旅行的美好</li>
+                  <li>收藏你喜歡的其他trip</li>
+                  <li>讓更多人看見旅行，喜歡旅行</li>
+                </ul>
+              <h3>透過app</h3>
+              <ul>
+                <li>建立旅行</li>
+                <li>旅行中打卡(可拍照或選圖，寫下你的感受)</li>
+                <li>擁有自己的記錄</li>
+              </ul></p>
+             <h5>專題by-University of Taipei<h5>
+		<h5>Koi,Daven</h5> 
+          </div>
+        </div>
+      </div>
+    </div>
+</body>
+</html>

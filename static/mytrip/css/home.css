@@ -1,0 +1,242 @@
+.side{
+background:#FFFFFF;
+  color:#000000;
+  border:4px solid #FF9999;
+  padding:5px;
+  width:250px;
+  /*height:240px;*/
+  position:fixed;
+  top:100px;
+  right:10px;
+  /*_position: absolute; /* position fixed for IE6 
+  _top:expression(documentElement.scrollTop+100);*/
+  z-index:3;
+}
+
+.cbp-spmenu {
+	overflow: auto;
+	background: #47a3da;
+	position: fixed;
+}
+
+.cbp-spmenu h3 {
+	color: #afdefa;
+	font-size: 1.9em;
+	padding: 20px;
+	margin: 0;
+	font-weight: 300;
+	background: #0d77b6;
+}
+
+.cbp-spmenu a {
+	display: block;
+	color: #fff;
+	font-size: 1.1em;
+	font-weight: 300;
+}
+
+.cbp-spmenu a:hover {
+	background: #258ecd;
+}
+
+.cbp-spmenu a:active {
+	background: #afdefa;
+	color: #47a3da;
+}
+
+/* Orientation-dependent styles for the content of the menu */
+
+.cbp-spmenu-vertical {
+	width: 240px;
+	height: 100%;
+	top: 0;
+	z-index: 1000;
+}
+
+.cbp-spmenu-vertical a {
+	border-bottom: 1px solid #258ecd;
+	padding: 1em;
+}
+
+.cbp-spmenu-horizontal {
+	width: 100%;
+	height: 150px;
+	left: 0;
+	z-index: 1000;
+	overflow: hidden;
+}
+
+.cbp-spmenu-horizontal h3 {
+	height: 100%;
+	width: 20%;
+	float: left;
+}
+
+.cbp-spmenu-horizontal a {
+	float: left;
+	width: 20%;
+	padding: 0.8em;
+	border-left: 1px solid #258ecd;
+}
+
+/* Vertical menu that slides from the left or right */
+
+.cbp-spmenu-left {
+	left: -240px;
+}
+
+.cbp-spmenu-right {
+	right: -240px;
+}
+
+.cbp-spmenu-left.cbp-spmenu-open {
+	left: 0px;
+}
+
+.cbp-spmenu-right.cbp-spmenu-open {
+	right: 0px;
+}
+
+/* Horizontal menu that slides from the top or bottom */
+
+.cbp-spmenu-top {
+	top: -150px;
+}
+
+.cbp-spmenu-bottom {
+	bottom: -150px;
+}
+
+.cbp-spmenu-top.cbp-spmenu-open {
+	top: 0px;
+}
+
+.cbp-spmenu-bottom.cbp-spmenu-open {
+	bottom: 0px;
+}
+
+/* Push classes applied to the body */
+
+.cbp-spmenu-push {
+	overflow-x: hidden;
+	position: relative;
+	left: 0;
+}
+
+.cbp-spmenu-push-toright {
+	left: 240px;
+}
+
+.cbp-spmenu-push-toleft {
+	left: -240px;
+}
+
+/* Transitions */
+
+.cbp-spmenu,
+.cbp-spmenu-push {
+	-webkit-transition: all 0.3s ease;
+	-moz-transition: all 0.3s ease;
+	transition: all 0.3s ease;
+}
+
+/* Example media queries */
+
+@media screen and (max-width: 55.1875em){
+
+	.cbp-spmenu-horizontal {
+		font-size: 75%;
+		height: 110px;
+	}
+
+	.cbp-spmenu-top {
+		top: -110px;
+	}
+
+	.cbp-spmenu-bottom {
+		bottom: -110px;
+	}
+}
+
+@media screen and (max-height: 26.375em){
+
+	.cbp-spmenu-vertical {
+		font-size: 90%;
+		width: 190px;
+	}
+
+	.cbp-spmenu-left,
+	.cbp-spmenu-push-toleft {
+		left: -190px;
+	}
+
+	.cbp-spmenu-right {
+		right: -190px;
+	}
+
+	.cbp-spmenu-push-toright {
+		left: 190px;
+	}
+}
+
+#showLeftPush {
+	border: none;
+	background: #47a3da;
+	color: #fff;
+	display: inline-block;
+	width: 75px;
+	height: 75px;
+	cursor: pointer;
+	/*margin: 0px 0px;*/
+	font-size: 20px;
+	left: 0;
+	transform: translateY(0px);
+	transition:background-color 0.3s, linear 0.3s; /*transform 0.3s*/
+	}
+
+#showLeftPush:hover {
+	/*background: black;
+	transform: translateY(30px);*/
+	background: #258ecd;
+}
+
+#showLeftPush:active {
+	/*background: red;*/
+	background: #0d77b6;
+}
+
+.fold{
+	width: 100%;
+	background-color: #ffffff;
+	height: 75px;
+	/*text-align:center;*/
+}
+
+.fold div{
+	position: absolute;
+	top:15%;
+	left: 40%;
+	display: inline;
+}
+.fold a {
+
+color: #5a5a5a;
+font-size: 15px;
+font-weight: bold;
+padding: 12px;
+top: 10px;
+text-transform: uppercase;
+}
+
+.fold li { 
+display: inline;
+}
+
+.info{
+	height=100%;
+	width=100%;
+	
+}
+body{margin: 0;
+font-family:'FangSong',Georgia, serif;
+}

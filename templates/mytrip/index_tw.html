@@ -1,0 +1,279 @@
+<!DOCTYPE html>
+<html>
+<head>
+<link href="http://s3.amazonaws.com/codecademy-content/courses/ltp/css/shift.css" rel="stylesheet"/>
+<link rel="stylesheet" href="http://s3.amazonaws.com/codecademy-content/courses/ltp/css/bootstrap.css">
+<link href="/static/mytrip/css/default.css" rel="stylesheet" type="text/css" media="all" />
+<script src="http://code.jquery.com/jquery-1.7.1.min.js"></script>
+<script src="/static/mytrip/js/bjqs-1.3.min.js"></script>
+<script src="/static/mytrip/js/index.js"></script>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>來旅行吧!</title>
+<!--STYLESHEETS-->
+<link href="/static/mytrip/css/index.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+<div id="shadow" class="opaqueLayer"></div>
+<div id="question" class="questionLayer">
+                {% if username %}
+		<iframe src="/mytrip/editfile" name="main" width="499px" height="480px" frameborder="0" scrolling=""></iframe>
+		<input type="button" onclick="hideLayer();" value="OK" />
+		{% else %}
+                <iframe src="/mytrip/login" name="main" width="499px" height="480px" frameborder="0" scrolling=""></iframe>
+                <br />
+               <a href="#" onclick="javascript:window.location.reload()"><input type="button" onclick="hideLayer();" value="OK" /></a>
+                {% endif %}
+		<br />
+</div>
+<div id ="model-screen">
+<div id="nav-side-bar"><a href="#">ddddd</a></div>
+
+<div class="nav">
+<div class="container">
+
+<ul class="pull-left">
+{% if username %}
+<li><a href="#" id="show_nav">&#8801;</a></li>
+{% else %}
+<li><a href="#">Daven/Koi</a></li>
+{% endif %}
+<li><a href="#" onclick="">關於</a></li>
+</ul>
+<ul class="pull-right">
+{% if username %}
+<li class="dropdown"><a href="#" class="dropdown-toggle">嗨! {{ username }}</a>
+	<ul class="dropdown-menu">
+            <li><a href="#" onclick="showLayer();">修改帳戶</a></li>
+            <li><a href="/mytrip/home/">我的旅行</a></li>
+        </ul>
+</li>
+<li><a href="/mytrip/logout/">登出</a></li>
+{% else %}
+<li><a href="/mytrip/register/">註冊</a></li>
+<li><a href="#login"onclick="showLayer();">登入</a></li>
+{% endif %}
+</ul>
+</div>
+</div>
+
+<div class="jumbotron">
+<div id="banner-slide" style="top:-14%;">
+
+        <!-- start Basic Jquery Slider -->
+        <ul class="bjqs">
+          <li>
+            <img src="/media/25_12_37.jpg">
+          </li>
+          <li>
+             <img src="http://farm4.staticflickr.com/3138/2820049743_cd4db87718_o.jpg">
+          </li>
+        </ul>
+        <!-- end Basic jQuery Slider -->
+        <script class="secret-source">
+        console.log(window.innerWidth);
+
+        jQuery(document).ready(function($) {
+
+          $('#banner-slide').bjqs({
+            //animtype      : 'none',
+            height        : 490,
+            width         : window.innerWidth,
+            responsive    : true,
+            randomstart   : true
+          });
+
+        });
+</script>
+
+</div>
+
+<div class="container">
+
+<h1>寫下每一趟的美好</h1>
+{% if username %}
+<p>可以點選左上角看到你所有的旅程
+為這些旅程做個喜歡的配置，然後收藏、分享 :)</p>
+<input type="button" onclick="showLayer();" value="ShowLayer" />
+{% else %}
+<p>一個打卡、照片
+  走過的足跡，創造屬於旅行中的快樂，回憶燦爛瞬間!
+  分享你的感動</p>
+<div class="shareit">
+<a href="/mytrip/select/">來分享吧!</a>
+</div>
+{% endif %}
+</div>
+
+</div>
+
+<div class="journey-guides" style="padding-top:2%;">
+
+<div class="container">
+
+<h2><a href=#journey>旅行探索</a>
+</h2>
+<div
+  class="fb-like"
+  data-share="true"
+  data-width="450"
+  data-show-faces="true">
+</div>
+
+<p>尋找自己想體驗、心動的旅行，說走就走的流浪</p>
+
+<div class="row">
+<a name=journey></a>
+<div class="col-md-4">
+<div class="view view-first">
+<div class="thumbnail">
+
+<img src="http://re-actor.net/uploads/posts/2012-08/1344284802_6.jpeg">
+<div class="mask">
+                      <h2>市北逛逛</h2>
+                      <p>透過分享的旅行清單，尋找心中的嚮往之地，然後走吧!</p>
+                      <a href="/mytrip/trip/10/" class="info">旅行體驗</a>
+ </div>
+</div>
+</div>
+</div>
+
+<div class="col-md-4">
+<div class="view view-first">
+<div class="thumbnail">
+<img src="/media/25_12_37.jpg">
+<div class="mask">
+                      <h2>玉山之行</h2>
+                      <p>透過照片欣賞不同地方的風貌特色，感動的景色</p>
+                      <a href="/mytrip/trip/12/" class="info">感動瞬間</a>
+</div>
+</div>
+</div>
+</div>
+
+<div class="col-md-4">
+<div class="view view-first">
+<div class="thumbnail">
+<img src="http://1.bp.blogspot.com/-yj04DVG2Lhw/Trc4jcgS6HI/AAAAAAAAA1k/bTRROUmr0Qg/s1600/travel2.jpg">
+<div class="mask">
+   <h2>旅程</h2>
+<p>不同的季節，天數，規劃，每次的旅行都是特別的</p>
+                      <a href="#" class="info">旅程搜索</a>
+</div>
+</div>
+</div>
+</div>
+
+</div>
+</div>
+</div>
+<script type="text/javascript">
+$("#show-nav").click(function() // 觸發展開目錄
+{
+   if( $(this).hasClass("nav-on-show") ) // 當已經是展開== 縮回去
+   {
+      $(this).removeClass("nav-on-show");
+      $("#mobile-screen").animate( { left: '-=250'} , 250 , function() {} );
+   }
+   else // 當不是展開時== 展開
+   {
+      $(this).addClass("nav-on-show");
+      $("#mobile-screen").animate( { left: '+=250'} , 250 , function() {} );
+   }
+});
+$("#mobile-screen").height( document.documentElement.clientHeight); // 將畫面高度填滿實際可見高度
+</script>
+<script type="text/javascript">
+function getBrowserHeight()
+{
+var intH = 0;
+var intW = 0;
+
+if(typeof window.innerWidth == 'number' )
+{
+intH = window.innerHeight;
+intW = window.innerWidth;
+}
+else if(document.documentElement && (document.documentElement.clientWidth || document.documentElement.clientHeight))
+{
+intH = document.documentElement.clientHeight;
+intW = document.documentElement.clientWidth;
+}
+else if(document.body && (document.body.clientWidth || document.body.clientHeight))
+{
+intH = document.body.clientHeight;
+intW = document.body.clientWidth;
+}
+return { width: parseInt(intW), height: parseInt(intH) };
+}
+
+function setLayerPosition()
+{
+var shadow = document.getElementById('shadow');
+var question = document.getElementById('question');
+var bws = getBrowserHeight();
+
+shadow.style.width = bws.width + 'px';
+shadow.style.height = bws.height + 'px';
+
+question.style.left = parseInt((bws.width - 350) / 2);
+question.style.top = parseInt((bws.height - 200) / 2);
+
+shadow = null;
+question = null;
+}
+
+function showLayer()
+{
+setLayerPosition();
+
+var shadow = document.getElementById('shadow');
+var question = document.getElementById('question');
+
+shadow.style.display = 'block';
+question.style.display = 'block';
+
+shadow = null;
+question = null;
+}
+
+function hideLayer()
+{
+var shadow = document.getElementById('shadow');
+var question = document.getElementById('question');
+
+shadow.style.display = 'none';
+question.style.display = 'none';
+
+shadow = null;
+question = null;
+}
+window.onresize = setLayerPosition;
+</script>
+<script type="text/javascript">
+var main = function() {
+  $(".dropdown-toggle").click(function() {
+    $(".dropdown-menu").toggle();
+  });
+}
+$(document).ready(main);
+</script>
+<script>
+  window.fbAsyncInit = function() {
+    FB.init({
+      appId      : '463703423771173',
+      xfbml      : true,
+      version    : 'v2.1'
+    });
+  };
+
+  (function(d, s, id){
+     var js, fjs = d.getElementsByTagName(s)[0];
+     if (d.getElementById(id)) {return;}
+     js = d.createElement(s); js.id = id;
+     js.src = "//connect.facebook.net/en_US/sdk.js";
+     fjs.parentNode.insertBefore(js, fjs);
+   }(document, 'script', 'facebook-jssdk'));
+</script>
+</div>
+</body>
+</html>

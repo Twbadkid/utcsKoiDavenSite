@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html>
+<meta utf-8>
+<title>Trip Sharing-{{ tripn }}</title>
+{% ifequal temps "1" %}
+<link href="/static/mytrip/css/t1.css" media="all" rel="stylesheet">
+{% endifequal %}
+{% ifequal temps "2" %}
+<link href="/static/mytrip/css/t2.css" media="all" rel="stylesheet">
+{% endifequal %}
+{% ifequal temps 3 %}
+<link href="/static/mytrip/css/t.css" media="all" rel="stylesheet">
+{% endifequal %} 
+<head>
+</head>
+<body>
+<div class="">
+{% if msg %}
+<p>{{ msg }}</p>
+{% endif %}
+</div>
+No. {{ temps }} style.
+<div class="side">
+<div
+  class="fb-like"
+  data-share="true"
+  data-width="450"
+  data-show-faces="true">
+</div>
+</div>
+<div class="triplist">
+{% for tripv in tripv %}
+      <div class="time">
+         {{ tripv.dtime }}
+        </div>
+        <div class="photo">
+            <h2>
+                {{ tripv.lid.local_name }}
+            </h2>
+                {% ifnotequal tripv.photo "/No" %}
+                <img class ="img-responsive" src = "/media/{{ tripv.photo }}"/>
+                {% endifnotequal %}
+	</div>
+	<div class="descript">
+            <p>{{ tripv.description }}</p>
+        </div>
+{% endfor %}
+</div>
+<script>
+  window.fbAsyncInit = function() {
+    FB.init({
+      appId      : '463703423771173',
+      xfbml      : true,
+      version    : 'v2.1'
+    });
+  };
+
+  (function(d, s, id){
+     var js, fjs = d.getElementsByTagName(s)[0];
+     if (d.getElementById(id)) {return;}
+     js = d.createElement(s); js.id = id;
+     js.src = "//connect.facebook.net/en_US/sdk.js";
+     fjs.parentNode.insertBefore(js, fjs);
+   }(document, 'script', 'facebook-jssdk'));
+</script>
+</body>
+</html>

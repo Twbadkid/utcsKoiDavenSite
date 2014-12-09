@@ -1,0 +1,171 @@
+<!DOCTYPE html>
+
+<html>
+
+
+<head>
+
+<link href="http://s3.amazonaws.com/codecademy-content/courses/ltp/css/shift.css" rel="stylesheet"/>
+
+
+<link rel="stylesheet" href="http://s3.amazonaws.com/codecademy-content/courses/ltp/css/bootstrap.css">
+<link href="/static/mytrip/css/default.css" rel="stylesheet" type="text/css" media="all" />
+<script src="http://code.jquery.com/jquery-1.7.1.min.js"></script>
+<script src="/static/mytrip/js/bjqs-1.3.min.js"></script>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>SHARE YOUR JOURNEY</title>
+
+<!--STYLESHEETS-->
+<link href="/static/mytrip/css/index.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+
+<div class="nav">
+
+<div class="container">
+
+<ul class="pull-left">
+
+<li><a href="#">Daven/Koi</a></li>
+
+<li><a href="/mytrip/select/">Help</a></li>
+</ul>
+
+<ul class="pull-right">
+
+{% if username %}
+<li><a href="/mytrip/home/">Hi! {{ username }}</a></li>
+<li><a href="/mytrip/logout/">Log out</a></li>
+{% else %}
+<li><a href="/mytrip/register/">Sign Up</a></li>
+<li><a href="/mytrip/login/">Log In</a></li>
+{% endif %}
+</ul>
+</div>
+</div>
+
+<div class="jumbotron">
+<div id="banner-slide" style="top:-14%;">
+
+        <!-- start Basic Jquery Slider -->
+        <ul class="bjqs">
+          <li>
+            <img src="/media/25_12_37.jpg">
+          </li>
+          <li>
+             <img src="http://farm4.staticflickr.com/3138/2820049743_cd4db87718_o.jpg">
+          </li>
+        </ul>
+        <!-- end Basic jQuery Slider -->
+        <script class="secret-source">
+        console.log(window.innerWidth);
+
+        jQuery(document).ready(function($) {
+
+          $('#banner-slide').bjqs({
+            //animtype      : 'none',
+            height        : 490,
+            width         : window.innerWidth,
+            responsive    : true,
+            randomstart   : true
+          });
+
+        });
+      </script>
+
+</div>
+
+<div class="container">
+
+<h1>|Record your journey</h1>
+
+<p>Once people moved from the heart of travel.
+ Share it!</p>
+<div class="shareit">
+<a href="/mytrip/select/">Share now</a>
+</div>
+</div>
+
+</div>
+
+<div class="journey-guides" style="padding-top:2%;">
+
+<div class="container">
+
+<h2><a href=#journey>Journey Guides</a>
+</h2>
+<div
+  class="fb-like"
+  data-share="true"
+  data-width="450"
+  data-show-faces="true">
+</div>
+
+<p>Not sure where to start?We've created journey guides for sharing.</p>
+
+<div class="row">
+<a name=journey></a>
+<div class="col-md-4">
+<div class="view view-first">
+<div class="thumbnail">
+
+<img src="http://re-actor.net/uploads/posts/2012-08/1344284802_6.jpeg">
+<div class="mask">  
+                      <h2>Location</h2>  
+                      <p>From apartments and rooms to treehouses and boats: stay in unique spaces in 192 countries.</p>  
+                      <a href="#" class="info">Some place you like</a>  
+ </div>
+</div>
+</div>
+</div>
+
+<div class="col-md-4">
+<div class="view view-first">
+<div class="thumbnail">
+<img src="/media/25_12_37.jpg">
+<div class="mask">
+                      <h2>Photo</h2>
+                      <p>Renting out your unused space could pay your bills or fund your next vacation.</p>
+                      <a href="#" class="info">Show touching moment</a>
+</div>
+</div>
+</div>
+</div>
+
+<div class="col-md-4">
+<div class="view view-first">
+<div class="thumbnail">
+<img src="http://1.bp.blogspot.com/-yj04DVG2Lhw/Trc4jcgS6HI/AAAAAAAAA1k/bTRROUmr0Qg/s1600/travel2.jpg">
+<div class="mask">
+                      <h2>Journey</h2>
+                      <p>From Verified ID to our worldwide customer support team, we've got your back.</p>
+                      <a href="#" class="info">Record everything wonderful</a>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+
+<script>
+  window.fbAsyncInit = function() {
+    FB.init({
+      appId      : '463703423771173',
+      xfbml      : true,
+      version    : 'v2.1'
+    });
+  };
+
+  (function(d, s, id){
+     var js, fjs = d.getElementsByTagName(s)[0];
+     if (d.getElementById(id)) {return;}
+     js = d.createElement(s); js.id = id;
+     js.src = "//connect.facebook.net/en_US/sdk.js";
+     fjs.parentNode.insertBefore(js, fjs);
+   }(document, 'script', 'facebook-jssdk'));
+</script>
+</body>
+
+</html>
+

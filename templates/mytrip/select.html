@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html>
+<head>
+</head>
+<body>
+User number:{{ uid }}
+{% if msg %}
+{{ msg }}
+{% endif %}
+<div class="side">
+<form method="POST" enctype="multipart/form-data" target="_parent">{% csrf_token %}
+{% for trip in triplist %}
+<input type="radio" name="whicht" id="whicht{{ trip.trip_name }}" value="{{ trip.trip_id }}" />
+<label for="whicht{{ trip.trip_id }}">{{ trip.trip_name }}</label><br />
+{% endfor %}
+<input type="checkbox" value="1" name="check" id="check"/>Public
+{{ temps.style }}
+<input type="submit" value="Save it"/>
+<!--a target="_blank" href="http//www.facebook.com/share.php?u=hello.koiubuntuserver.idv.tw/mytrip/trip/{{ trip.trip_id }}/">Share it on facebook</a-->
+</form>
+</div>
+{{ permission }}
+<a href="/mytrip/home/">Home</a>
+</body>
+</html>
+

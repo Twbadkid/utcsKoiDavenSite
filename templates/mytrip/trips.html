@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+	<title>Trip</title>
+</head>
+<body>
+<a href="/mytrip/">INDEX</a>
+{% if msg %}
+<h1>{{ msg }} </h1>
+{%endif %}
+{% for trips in trips %}
+<h2>第{{trips.trip_id }}個旅程</h2>
+<ul>
+	<li>這是{{ trips.uid }}在{{trips.trip_date }}探索{{ trips.trip_name }}
+</ul>
+<h3>旅程中的地點</h3>
+{% for tripl in tripl %}
+
+{% ifequal trips.trip_id tripl.tid.trip_id %}
+<ul>
+	<li>旅程 : {{ tripl.tid.trip_name }}, 地點 : {{ tripl.lid.local_name }}
+	{% ifnotequal tripl.photo "/No" %}
+	<li><img src = " /media/{{ tripl.photo }} " /><!--width="256" height="256"/-->
+	{% endifnotequal %}
+	<li>描述：　{{ tripl.description }}
+</ul>
+{% endifequal %}
+{% endfor %}
+{% endfor %}
+
+<h2>
+<!--img src="/media/B.jpg" width="256" height="256" /-->
+</body>
+</html>
+

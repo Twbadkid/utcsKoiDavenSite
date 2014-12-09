@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Trip Sharing-{{ tripn }}</title>
+<link href="https://netdna.bootstrapcdn.com/bootstrap/3.1.1/css/bootstrap.min.css" media="all" rel="stylesheet">
+<link href="https://netdna.bootstrapcdn.com/font-awesome/4.1.0/css/font-awesome.min.css" media="all" rel="stylesheet">
+<link href="/static/mytrip/css/tripv1.css" media="all" rel="stylesheet">
+<script src="https://cdnjs.cloudflare.com/ajax/libs/modernizr/2.8.1/modernizr.min.js"></script>
+<meta content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" name="viewport">
+</head>
+<body>
+{{ no }}
+{{ h }}
+{{ whichtrip }}
+{{ style }}
+<div class="">
+{% if msg %}
+<p>{{ msg }}</p>
+{% endif %}
+<div class="banner">
+<h1>{{ tripn }}</h1>
+</div>
+<div class="timeline animated">
+{% for tripv in tripv %}
+      <div class="timeline-row">
+        <div class="timeline-time">
+          <small>{{ tripv.dtime }}</small>
+        </div>
+        <div class="timeline-icon">
+	 {% ifnotequal tripv.photo "/No" %}
+          <div class="bg-info">
+	    <i class="fa fa-camera"></i>
+	</div>
+	{% endifnotequal %}
+        {% ifequal tripv.photo "/No" %}
+          <div class="bg-primary">
+            <i class="fa fa-pencil"></i>
+          </div>
+        {% endifequal %}
+        </div>
+        <div class="panel timeline-content">
+          <div class="panel-body">
+            <h2>
+                {{ tripv.lid.local_name }}
+            </h2>
+                {% ifnotequal tripv.photo "/No" %}
+                <img class ="img-responsive" src = "/media/{{ tripv.photo }}"/>
+                {% endifnotequal %}
+            <p>{{ tripv.description }}</p>
+          </div>
+        </div>
+      </div>
+{% endfor %}
+</div>
+</div>
+<script src="https://netdna.bootstrapcdn.com/bootstrap/3.1.1/js/bootstrap.min.js"></script>
+<script src="http://code.jquery.com/jquery-1.10.2.min.js"></script>
+<script src="/static/mytrip/js/tripv1.js"></script>
+<!--ul>
+        <li>地點 : {{ tripv.lid.local_name }}
+        {% ifnotequal tripv.photo "/No" %}
+        <li><img src = " /media/{{ tripv.photo }} " />
+        {% endifnotequal %}
+        <li>描述：　{{ tripv.description }}
+	<li>時間: {{ tripv.dtime }}
+</ul>
+</body>
+</html>

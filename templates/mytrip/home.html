@@ -1,0 +1,66 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+  <meta charset="UTF-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0">  
+  <title> Welcome </title>  
+  <meta http-equiv="Content-Type" content="text/html; charset=utf-8" /> 
+<link rel="stylesheet" type="text/css" href="/static/mytrip/css/home.css" />
+		<script src="/static/mytrip/js/modernizr.custom.js"></script> 
+</head>
+<body class="cbp-spmenu-push">
+<div class="fold">
+	<li><button id="showLeftPush">&#8801;</button></li>
+	<li><a>{{ user.name }}</a><li>
+	<li><a href="/mytrip/">回首頁</a></li>
+	<li><a href="/mytrip/logout">登出</a></li>
+</div>
+<!--form method = "post"-->
+<div class="info">
+<iframe src="/mytrip/menu" name="main" width="1000px" height="1200px" frameborder="1" scrolling="auto">
+{% for msg in msg %}
+<ul>
+<h3>YOUR NAME: {{ msg.name }}</h3>
+<h3>ACCOUNT: {{ msg.user_id }}</h3>
+<h3>Email: {{ msg.email }}</h3>
+</ul>
+{% endfor %}
+</iframe>
+</div>
+<div class="side">
+
+<form method="POST" enctype="multipart/form-data" target="_parent">{% csrf_token %}
+{% for trip in triplist %}
+<input type="radio" name="choice" id="choice{{ trip.trip_id }}" value="{{ trip.trip_name }}" />
+<label for="choice{{ trip.trip_id }}">{{ trip.trip_name }}</label><br />
+{% endfor %}
+<input type="checkbox" value="true" name="ifpublic"/>分享旅行紀錄
+{{ temps.as_p }}
+<br>
+<input type="submit" value="Submit"/>
+</form>
+</div>
+<nav class="cbp-spmenu cbp-spmenu-vertical cbp-spmenu-left" id="cbp-spmenu-s1">
+<h3>我的旅行清單</h3>
+<a href="/mytrip/select" target="main">分享我的旅行</a>
+<a href="/mytrip/editfile" target="main">我的資料設定</a>
+{% for triplist in triplist %}
+<a href="/mytrip/trip/{{ triplist.trip_id }}/" target="main" name="{{ triplist.trip_name }}" id="triplist.trip_id">. {{ triplist.trip_name }}</a>
+{% endfor %}
+</nav>
+<script src="/static/mytrip/js/classie.js"></script>
+		<script>
+			var menuLeft = document.getElementById( 'cbp-spmenu-s1' ),
+				showLeftPush = document.getElementById( 'showLeftPush' ),
+				body = document.body;
+
+			showLeftPush.onclick = function() {
+				classie.toggle( this, 'active' );
+				classie.toggle( body, 'cbp-spmenu-push-toright' );
+				classie.toggle( menuLeft, 'cbp-spmenu-open' );
+				disableOther( 'showLeftPush' );
+			};
+		</script>
+<!--a href="#">See my trips</a-->
+</body>
+</html>
