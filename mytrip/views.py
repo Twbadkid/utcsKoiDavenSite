@@ -270,6 +270,8 @@ def tripv(request, trip_id):
                 tripv=Trip_Location.objects.filter(tid__exact= idno)
 		if temps=="1":
 			return render_to_response('mytrip/tripv.html',{'tripv':tripv,'tripn':tripn})
+		elif temps=="3":
+			return render_to_response('mytrip/tripv3.html',{'tripv':tripv,'tripn':tripn})
 		else:
 			return render_to_response('mytrip/tripv1.html',{'tripv':tripv, 'tripn':tripn,'temps':temps})
 		#return render_to_response('mytrip/tripv1.html',{'tripn':tripn,'tripv':tripv, 'temps':temps})

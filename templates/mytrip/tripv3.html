@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta chatset="utf-8">
+	<title>DJango Test By FC</title>
+</head>
+<body>
+	<div class="">
+		{% if msg %}
+		<p>{{ msg }}</p>
+		{% endif %}
+	</div>
+	No. {{ temps }} style.
+	<div class="side">
+		<div
+  class="fb-like"
+  data-share="true"
+  data-width="450"
+  data-show-faces="true"></div>
+	</div>
+
+	<div class="originHTML">
+		<div id="tripTitleId">{{tripn}}</div>
+		{% for tripv in tripv %}
+		<div class="oBlock">
+			<div class="oDate">{{ tripv.dtime }}</div>
+
+			<div class="oEachPlace">{{ tripv.lid.local_name }}</div>
+
+			<div class="oPhoto">
+				{% ifnotequal tripv.photo "/No" %}
+				<img class ="eachImgClass" src = "/media/{{ tripv.photo }}"/>
+				{% endifnotequal %}
+			</div>
+
+			<div class="oDescript">{{ tripv.description }}</div>
+
+		</div>
+		{% endfor %}
+	</div>
+</body>
+</html>
