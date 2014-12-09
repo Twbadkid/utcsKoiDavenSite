@@ -8,18 +8,24 @@ Web Application with Django
 <li><a href="#">Our App</a></li>
 <ul>
 
+<p><ul>
 pmem
 ../mytrip (app name)
+../../__init__.py
 ../../urls.py
 ../../views.py
 ../../model.py
 ../../admin.py
-
+</ul></p>
+<p>
 ../pmem (project settings)
+../../__init__.py
 ../../settings.py
 ../../urls.py
 ../../wsgi.py
-
+</p>
+<p>
 ../template (views.py-> .html)
 ../static (css&js)
 ../media (for pictures or another...)
+</p>
